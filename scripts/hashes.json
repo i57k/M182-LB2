@@ -1,0 +1,29 @@
+{
+  "schwach": {
+    "passwort": "123456",
+    "md5": "e10adc3949ba59abbe56e057f20f883e",
+    "sha1": "7c4a8d09ca3762af61e59520943dc26494f8941b",
+    "sha1_gesalzen": "6d39acd7dd8eacfe809e5d8bf51e58719ebb7c7e",
+    "salt_hex": "4f694df8b49096ab560d6ad504cd8410",
+    "bcrypt": "$2b$12$TAYvVbzz6mP9R9tCyiMXLOHASdwupjQZv/2n9UCmchNeWzdbefCNS",
+    "argon2": "$argon2id$v=19$m=65536,t=3,p=4$luvgcEvucAbyg0gI55SEBQ$ca+KKDymxm/E85+pgcjbxPGk1SvXcR/Vy4RUa78x1wg"
+  },
+  "mittel": {
+    "passwort": "Sommer2024",
+    "md5": "e882e23a6e45140d721a09a6c02f29fe",
+    "sha1": "b3376a3bc0975117fcc6cce7c021324b314f8ae9",
+    "sha1_gesalzen": "39a53fd82f773eda7b6a4606a2c0abe35a3d4fca",
+    "salt_hex": "dec12c5f4550c270e2ec31adca7495e6",
+    "bcrypt": "$2b$12$2VMDkKoP2M.AS9e6ghl4OeK/c5X/pomrS1bUNR.I41G4sGl.xMhTK",
+    "argon2": "$argon2id$v=19$m=65536,t=3,p=4$+aPlOxp1iMb+lsaQOWW3nQ$gErrphtyaEHwn5BtiIOCDpXMaTsCc9n0aLkR2istwq0"
+  },
+  "stark": {
+    "passwort": "K7#mPx9!qLz2",
+    "md5": "52eadd82f8eeee484e875b496f54608c",
+    "sha1": "2485bb2324827d66d04db57788cbaca37d657d78",
+    "sha1_gesalzen": "afd84856028323092181760a432520475b238e0a",
+    "salt_hex": "ce16619a95400fc463d3314ef333f9ca",
+    "bcrypt": "$2b$12$fvRz1P/ivmIhhMdsBJqxsOiMKn4r/jCqYm2XfmoSkg5RXkAVTHqd6",
+    "argon2": "$argon2id$v=19$m=65536,t=3,p=4$ArzxSlMkKLJPqpDvzC9PSA$vhyUVI+WD5e+spaeNcClZ9RU70a7zt/+LHYMXohnbmQ"
+  }
+}

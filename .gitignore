@@ -1,0 +1,4 @@
+rockyou.txt
+scripts/venv/
+*.txt
+!scripts/md5_*.txt

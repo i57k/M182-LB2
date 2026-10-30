@@ -1,4 +1,21 @@
+# Wordlist (134 MB, zu gross für GitHub)
 rockyou.txt
+
+# Python
 scripts/venv/
+__pycache__/
+
+# Textdateien grundsätzlich ignorieren ...
 *.txt
+# ... ausser den Test-Hashes, auf die die Dokumentation verweist
 !scripts/md5_*.txt
+!scripts/sha1_*.txt
+!scripts/bcrypt_*.txt
+!scripts/argon2_*.txt
+
+# TOTP-Secret und QR-Code (enthalten den geheimen Schlüssel)
+scripts/totp_secret.txt
+scripts/totp_qrcode.png
+
+# Rohnotizen und Word-Export (nicht Teil der Abgabe)
+docs/

@@ -16,8 +16,8 @@
 
 | Dokument | Für wen? | Inhalt |
 |---|---|---|
-| 📘 **[Dokumentation](Dokumentation/Dokumentation.md)** | **Klasse** (Lernressource) | Theorie zu Hashing, Salt, bcrypt und Argon2 · Angriffe mit Hashcat (Dictionary, Brute-Force, Rainbow Table) · Verteidigung mit Rate-Limiting, Fail2Ban, TOTP/2FA, Vaultwarden, Have I Been Pwned, Keycloak und testssl.sh · Reflexion · Quellen · Glossar · Selbsttests |
-| 📋 **[Projektplanung](Projektplanung/Projektplanung.md)** | **Lehrperson** | Ziele, Abgrenzung, Phasen, Arbeitspakete, Zeitplan, Arbeitsteilung, Zwischengespräch, Bewertungskriterien, Risiken, Reflexion · Troubleshooting-Historie |
+|  **[Dokumentation](Dokumentation/Dokumentation.md)** | **Klasse** (Lernressource) | Theorie zu Hashing, Salt, bcrypt und Argon2 · Angriffe mit Hashcat (Dictionary, Brute-Force, Rainbow Table) · Verteidigung mit Rate-Limiting, Fail2Ban, TOTP/2FA, Vaultwarden, Have I Been Pwned, Keycloak und testssl.sh · Reflexion · Quellen · Glossar · Selbsttests |
+|  **[Projektplanung](Projektplanung/Projektplanung.md)** | **Lehrperson** | Ziele, Abgrenzung, Phasen, Arbeitspakete, Zeitplan, Arbeitsteilung, Zwischengespräch, Bewertungskriterien, Risiken, Reflexion · Troubleshooting-Historie |
 
 ## Direkt zu den Kapiteln
 

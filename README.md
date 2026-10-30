@@ -16,24 +16,24 @@
 
 | Dokument | Für wen? | Inhalt |
 |---|---|---|
-| 📘 **[Dokumentation](Dokumentation-Klasse/Dokumentation.md)** | **Klasse** (Lernressource) | Theorie zu Hashing, Salt, bcrypt und Argon2 · Angriffe mit Hashcat (Dictionary, Brute-Force, Rainbow Table) · Verteidigung mit Rate-Limiting, Fail2Ban, TOTP/2FA, Vaultwarden, Have I Been Pwned, Keycloak und testssl.sh · Reflexion · Quellen · Glossar · Selbsttests |
-| 📋 **[Projektplanung](Projektplanung-Lehrperson/Projektplanung.md)** | **Lehrperson** | Ziele, Abgrenzung, Phasen, Arbeitspakete, Zeitplan, Arbeitsteilung, Zwischengespräch, Bewertungskriterien, Risiken, Reflexion · Troubleshooting-Historie |
+| 📘 **[Dokumentation](Dokumentation/Dokumentation.md)** | **Klasse** (Lernressource) | Theorie zu Hashing, Salt, bcrypt und Argon2 · Angriffe mit Hashcat (Dictionary, Brute-Force, Rainbow Table) · Verteidigung mit Rate-Limiting, Fail2Ban, TOTP/2FA, Vaultwarden, Have I Been Pwned, Keycloak und testssl.sh · Reflexion · Quellen · Glossar · Selbsttests |
+| 📋 **[Projektplanung](Projektplanung/Projektplanung.md)** | **Lehrperson** | Ziele, Abgrenzung, Phasen, Arbeitspakete, Zeitplan, Arbeitsteilung, Zwischengespräch, Bewertungskriterien, Risiken, Reflexion · Troubleshooting-Historie |
 
 ## Direkt zu den Kapiteln
 
 **Dokumentation (Klasse)**
 
-1. [Grundlagen – Hashing, Salt, bcrypt, Argon2, Passwort-Policy](Dokumentation-Klasse/Dokumentation.md#kapitel-1)
-2. [Testumgebung – Werkzeuge, Aufbau, Testpasswörter](Dokumentation-Klasse/Dokumentation.md#kapitel-2)
-3. [Angriffe – Dictionary, Brute-Force, Rainbow Tables](Dokumentation-Klasse/Dokumentation.md#kapitel-3)
-4. [Verteidigung – von Salt bis zum Security-Audit](Dokumentation-Klasse/Dokumentation.md#kapitel-4)
-5. [Reflexion und Fazit](Dokumentation-Klasse/Dokumentation.md#kapitel-5)
-6. [Quellenverzeichnis](Dokumentation-Klasse/Dokumentation.md#kapitel-6)
-7. [Glossar](Dokumentation-Klasse/Dokumentation.md#kapitel-7)
+1. [Grundlagen – Hashing, Salt, bcrypt, Argon2, Passwort-Policy](Dokumentation/Dokumentation.md#kapitel-1--grundlagen-hashing-salt-bcrypt-argon2-und-passwort-policy)
+2. [Testumgebung – Werkzeuge, Aufbau, Testpasswörter](Dokumentation/Dokumentation.md#kapitel-2--testumgebung-werkzeuge-aufbau-und-testpasswörter)
+3. [Angriffe – Dictionary, Brute-Force, Rainbow Tables](Dokumentation/Dokumentation.md#kapitel-3--angriffe-dictionary-brute-force-und-rainbow-tables)
+4. [Verteidigung – von Salt bis zum Security-Audit](Dokumentation/Dokumentation.md#kapitel-4--verteidigung-von-salt-bis-zum-security-audit)
+5. [Reflexion und Fazit](Dokumentation/Dokumentation.md#kapitel-5--reflexion-und-fazit)
+6. [Quellenverzeichnis](Dokumentation/Dokumentation.md#kapitel-6--quellenverzeichnis)
+7. [Glossar](Dokumentation/Dokumentation.md#kapitel-7--glossar)
 
 **Projektplanung (Lehrperson)**
 
-- [Ziele](Projektplanung-Lehrperson/Projektplanung.md#3-ziele) · [Zeitplan und Arbeitsjournal](Projektplanung-Lehrperson/Projektplanung.md#7-zeitplan-und-arbeitsjournal) · [Arbeitsteilung](Projektplanung-Lehrperson/Projektplanung.md#8-arbeitsteilung) · [Zwischengespräch](Projektplanung-Lehrperson/Projektplanung.md#9-zwischengespräch-mit-der-lehrperson) · [Troubleshooting](Projektplanung-Lehrperson/Projektplanung.md#troubleshooting)
+- [Ziele](Projektplanung/Projektplanung.md#3-ziele) · [Zeitplan und Arbeitsjournal](Projektplanung/Projektplanung.md#7-zeitplan-und-arbeitsjournal) · [Arbeitsteilung](Projektplanung/Projektplanung.md#8-arbeitsteilung) · [Zwischengespräch](Projektplanung/Projektplanung.md#9-zwischengespräch-mit-der-lehrperson) · [Troubleshooting](Projektplanung/Projektplanung.md#14-troubleshooting-historie)
 
 ## Ergebnisse auf einen Blick
 
@@ -51,10 +51,10 @@
 ```
 M182-LB2/
 ├── README.md                          Diese Übersicht
-├── Dokumentation-Klasse/
+├── Dokumentation/
 │   ├── Dokumentation.md               Lernressource für die Klasse
 │   └── images/                        69 Abbildungen
-├── Projektplanung-Lehrperson/
+├── Projektplanung/
 │   ├── Projektplanung.md              Projektplanung und Troubleshooting
 │   └── images/                        13 Abbildungen
 └── scripts/                           Alle Python-Skripte und Test-Hashes

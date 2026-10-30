@@ -11,7 +11,7 @@
 | **Umfang** | ca. 20 Lektionen pro Person, total ca. 40 Lektionen |
 | **Zwischengespräch** | 19.10.2026 |
 
-Dieses Dokument richtet sich an die Lehrperson. Die Lernressource für die Klasse ist ein separates Dokument: [Dokumentation-Klasse/Dokumentation.md](../Dokumentation-Klasse/Dokumentation.md). Die Troubleshooting-Historie steht in [Kapitel 14](#troubleshooting) dieses Dokuments.
+Dieses Dokument richtet sich an die Lehrperson. Die Lernressource für die Klasse ist ein separates Dokument: [Dokumentation/Dokumentation.md](../Dokumentation/Dokumentation.md). Die Troubleshooting-Historie steht in [Kapitel 14](#14-troubleshooting-historie) dieses Dokuments.
 
 ---
 
@@ -30,7 +30,7 @@ Dieses Dokument richtet sich an die Lehrperson. Die Lernressource für die Klass
 11. [Risiken und Massnahmen](#11-risiken-und-massnahmen)
 12. [Eingesetzte Hilfsmittel](#12-eingesetzte-hilfsmittel)
 13. [Projektreflexion](#13-projektreflexion)
-14. [Troubleshooting-Historie](#troubleshooting)
+14. [Troubleshooting-Historie](#14-troubleshooting-historie)
 
 ---
 
@@ -140,7 +140,7 @@ Da wir beide in allen Unterrichtslektionen am Projekt gearbeitet haben, ergeben 
 | mehrfach in der Woche 26.–30.10.2026 | Schubert Diago | Pflege der Testumgebung, HIBP-Integration, Security-Audit mit testssl.sh |
 | Fr 30.10.2026 | gemeinsam | Zusammenführung und Finalisierung der gesamten Dokumentation |
 
-Zusammen mit den 32 Personen-Lektionen im Unterricht liegt der Gesamtaufwand damit **über den geforderten 40 Lektionen**. Der zusätzliche Aufwand entstand vor allem durch die freiwilligen Zusatzziele Z7 und Z8 (Vaultwarden, Keycloak, testssl.sh) und das dabei nötige Troubleshooting (siehe [Kapitel 14](#troubleshooting)).
+Zusammen mit den 32 Personen-Lektionen im Unterricht liegt der Gesamtaufwand damit **über den geforderten 40 Lektionen**. Der zusätzliche Aufwand entstand vor allem durch die freiwilligen Zusatzziele Z7 und Z8 (Vaultwarden, Keycloak, testssl.sh) und das dabei nötige Troubleshooting (siehe [Kapitel 14](#14-troubleshooting-historie)).
 
 ## 8. Arbeitsteilung
 
@@ -158,7 +158,7 @@ Zusammen mit den 32 Personen-Lektionen im Unterricht liegt der Gesamtaufwand dam
 
 | Feedback | Umsetzung |
 |---|---|
-| Formale Vorgabe: **zwei Dokumente**. Die Projektplanung und alles Administrative müssen **getrennt** von der Dokumentation für die Klasse abgegeben werden. | Zwei getrennte Dokumente: `Dokumentation-Klasse/Dokumentation.md` (Lernressource) und `Projektplanung-Lehrperson/Projektplanung.md` (Planung und Troubleshooting) |
+| Formale Vorgabe: **zwei Dokumente**. Die Projektplanung und alles Administrative müssen **getrennt** von der Dokumentation für die Klasse abgegeben werden. | Zwei getrennte Dokumente: `Dokumentation/Dokumentation.md` (Lernressource) und `Projektplanung/Projektplanung.md` (Planung und Troubleshooting) |
 | Das Dokument für die Lernenden muss **spannend** sein. Das Administrative interessiert die Klassenkameraden nicht, ist aber für die Lehrperson relevant. | Klassen-Doku ohne Fehlversuche und Setup-Probleme, dafür mit Ergebnistabellen, Abbildungen, Selbsttests und Praxis-Checkliste. Alle Probleme stehen in Kapitel 14 der Projektplanung. |
 | **Komplexität** soll 20 Lektionen pro Person entsprechen, also 40 Lektionen bei einer Zweiergruppe. Die vollen Punkte gibt es, wenn die Lektionen effizient genutzt bzw. mehr Zeit investiert wird. | Pflichtteil um freiwillige Zusatzziele erweitert (Vaultwarden, Keycloak, testssl.sh), zusätzliche Arbeitszeit ausserhalb des Unterrichts (siehe Kapitel 7) |
 | **Quellen:** im Quellenverzeichnis referenzieren oder im Fliesstext mit Link erwähnen. | Beides umgesetzt: Nummerierte Verweise [Q1] bis [Q32] im Fliesstext, Quellenverzeichnis mit Link und Zugriffsdatum |
@@ -172,7 +172,7 @@ Zusammen mit den 32 Personen-Lektionen im Unterricht liegt der Gesamtaufwand dam
 | Praxisorientierte Beispiele und Demos | Dokumentation, Kapitel 2 bis 4, 9 eigene Skripte, 69 Abbildungen |
 | Für Lernende aufbereitet | Lernziele, Ergebnisse auf einen Blick, Selbsttests, Glossar, Checkliste |
 | Quellen | Dokumentation, Kapitel 6 (32 Quellen), und Verweise im Fliesstext |
-| Zwei getrennte Dokumente | `Dokumentation-Klasse/Dokumentation.md` und `Projektplanung-Lehrperson/Projektplanung.md` |
+| Zwei getrennte Dokumente | `Dokumentation/Dokumentation.md` und `Projektplanung/Projektplanung.md` |
 | Projektplanung und Administratives | dieses Dokument |
 | Nachvollziehbarkeit der Arbeit | Kapitel 14 (Troubleshooting) mit 8 Fällen und 13 Abbildungen |
 | Engagement | Zusatzziele Z7 und Z8, interaktive Elemente |
@@ -217,11 +217,9 @@ Zusammen mit den 32 Personen-Lektionen im Unterricht liegt der Gesamtaufwand dam
 
 ---
 
-<a id="troubleshooting"></a>
-
 ## 14. Troubleshooting-Historie
 
-Dieses Dokument enthält alle Probleme, die während der Umsetzung aufgetreten sind, im Format **Symptom → Diagnose → Lösung → Erkenntnis**. Die fertigen, funktionierenden Konfigurationen stehen in der [Dokumentation für die Klasse](../Dokumentation-Klasse/Dokumentation.md).
+Dieses Dokument enthält alle Probleme, die während der Umsetzung aufgetreten sind, im Format **Symptom → Diagnose → Lösung → Erkenntnis**. Die fertigen, funktionierenden Konfigurationen stehen in der [Dokumentation für die Klasse](../Dokumentation/Dokumentation.md).
 
 ---
 

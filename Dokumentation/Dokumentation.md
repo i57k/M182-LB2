@@ -35,19 +35,19 @@ Nach dem Durcharbeiten dieser Dokumentation kannst du …
 
 | Kapitel | Inhalt |
 |---|---|
-| [Kapitel 1 – Grundlagen](#kapitel-1) | Hashing, Salt, Pepper, bcrypt, Argon2, Online- vs. Offline-Angriffe, Passwort-Policy |
-| [Kapitel 2 – Testumgebung](#kapitel-2) | Werkzeuge, Aufbau, Testpasswörter, Hash-Generierung, Server-Infrastruktur |
-| [Kapitel 3 – Angriffe](#kapitel-3) | Dictionary-Attacke, Brute-Force, Angriffe auf bcrypt/Argon2, Geschwindigkeitsvergleich, Rainbow Table |
-| [Kapitel 4 – Verteidigung](#kapitel-4) | Salting-Nachweis, Rate-Limiting, Fail2Ban, TOTP, Vaultwarden, HIBP, Keycloak, testssl.sh |
-| [Kapitel 5 – Reflexion und Fazit](#kapitel-5) | Angriff-Verteidigung-Matrix, Restrisiken, Sicherheitsprinzipien, Checkliste, Fazit |
-| [Kapitel 6 – Quellenverzeichnis](#kapitel-6) | Alle Quellen mit Link und Zugriffsdatum |
-| [Kapitel 7 – Glossar](#kapitel-7) | Fachbegriffe kurz erklärt |
+| [Kapitel 1 – Grundlagen](#kapitel-1--grundlagen-hashing-salt-bcrypt-argon2-und-passwort-policy) | Hashing, Salt, Pepper, bcrypt, Argon2, Online- vs. Offline-Angriffe, Passwort-Policy |
+| [Kapitel 2 – Testumgebung](#kapitel-2--testumgebung-werkzeuge-aufbau-und-testpasswörter) | Werkzeuge, Aufbau, Testpasswörter, Hash-Generierung, Server-Infrastruktur |
+| [Kapitel 3 – Angriffe](#kapitel-3--angriffe-dictionary-brute-force-und-rainbow-tables) | Dictionary-Attacke, Brute-Force, Angriffe auf bcrypt/Argon2, Geschwindigkeitsvergleich, Rainbow Table |
+| [Kapitel 4 – Verteidigung](#kapitel-4--verteidigung-von-salt-bis-zum-security-audit) | Salting-Nachweis, Rate-Limiting, Fail2Ban, TOTP, Vaultwarden, HIBP, Keycloak, testssl.sh |
+| [Kapitel 5 – Reflexion und Fazit](#kapitel-5--reflexion-und-fazit) | Angriff-Verteidigung-Matrix, Restrisiken, Sicherheitsprinzipien, Checkliste, Fazit |
+| [Kapitel 6 – Quellenverzeichnis](#kapitel-6--quellenverzeichnis) | Alle Quellen mit Link und Zugriffsdatum |
+| [Kapitel 7 – Glossar](#kapitel-7--glossar) | Fachbegriffe kurz erklärt |
 
 ## So liest du diese Dokumentation
 
 - Jedes Kapitel endet mit einem kurzen **Selbsttest**. Klappe die Antworten erst auf, wenn du selbst überlegt hast.
-- Quellen werden im Text als **[Q1]**, **[Q2]** usw. angegeben und sind im [Quellenverzeichnis](#kapitel-6) mit Link und Zugriffsdatum aufgeführt.
-- Fachbegriffe, die du nicht kennst, findest du im [Glossar](#kapitel-7).
+- Quellen werden im Text als **[Q1]**, **[Q2]** usw. angegeben und sind im [Quellenverzeichnis](#kapitel-6--quellenverzeichnis) mit Link und Zugriffsdatum aufgeführt.
+- Fachbegriffe, die du nicht kennst, findest du im [Glossar](#kapitel-7--glossar).
 - Alle Skripte, die wir geschrieben haben, sind vollständig abgedruckt und liegen zusätzlich im Ordner [`scripts/`](../scripts/) des Repositorys. Du kannst sie in deiner eigenen Testumgebung nachbauen.
 
 ## Die wichtigsten Ergebnisse auf einen Blick
@@ -64,8 +64,6 @@ Nach dem Durcharbeiten dieser Dokumentation kannst du …
 | HIBP-Check | `Stefan123!` wurde **2511-mal** in Datenlecks gefunden |
 
 ---
-
-<a id="kapitel-1"></a>
 
 ## Kapitel 1 – Grundlagen: Hashing, Salt, bcrypt, Argon2 und Passwort-Policy
 
@@ -88,7 +86,7 @@ Eine **kryptografische Hash-Funktion** macht aus einer beliebig langen Eingabe e
 | **Lawineneffekt** | Kleinste Änderung der Eingabe → völlig anderer Hash | `123456` und `123457` haben komplett verschiedene Hashes |
 
 > [!NOTE]
-> **Hashing ist keine Verschlüsselung.** Eine Verschlüsselung lässt sich mit dem richtigen Schlüssel wieder rückgängig machen. Ein Hash nicht. Ein Angreifer kann einen Hash deshalb nur «knacken», indem er **Passwörter rät**, sie selbst hasht und schaut, ob der gleiche Hash herauskommt. Genau das machen Werkzeuge wie Hashcat (siehe [Kapitel 03](#kapitel-3)).
+> **Hashing ist keine Verschlüsselung.** Eine Verschlüsselung lässt sich mit dem richtigen Schlüssel wieder rückgängig machen. Ein Hash nicht. Ein Angreifer kann einen Hash deshalb nur «knacken», indem er **Passwörter rät**, sie selbst hasht und schaut, ob der gleiche Hash herauskommt. Genau das machen Werkzeuge wie Hashcat (siehe [Kapitel 03](#kapitel-3--angriffe-dictionary-brute-force-und-rainbow-tables)).
 
 ### 3. Das Problem: schnelle Hash-Funktionen (MD5, SHA-1)
 
@@ -192,7 +190,7 @@ Für das Verständnis der Verteidigung ist eine Unterscheidung wichtig:
 | **Geschwindigkeit** | langsam (Netzwerk, Server-Antwortzeit) | extrem schnell (Millionen bis Milliarden Versuche pro Sekunde) |
 | **Wird bemerkt?** | ja, in den Logs des Servers | nein, der Server merkt nichts |
 | **Wirksame Verteidigung** | Rate-Limiting, Account-Lockout, Fail2Ban, 2FA | Salt, langsame Hash-Verfahren (bcrypt, Argon2), lange Passwörter |
-| **In dieser Doku** | [Kapitel 04](#kapitel-4) | [Kapitel 03](#kapitel-3) |
+| **In dieser Doku** | [Kapitel 04](#kapitel-4--verteidigung-von-salt-bis-zum-security-audit) | [Kapitel 03](#kapitel-3--angriffe-dictionary-brute-force-und-rainbow-tables) |
 
 Gegen Offline-Angriffe helfen Rate-Limiting und Account-Sperren **nicht**, weil der Angreifer gar nicht mehr mit dem Server spricht. Deshalb braucht es **beide** Arten von Schutz.
 
@@ -255,8 +253,6 @@ Nein. Es ist zu kurz (11 statt 15 Zeichen für ein alleiniges Passwort) und folg
 </details>
 
 ---
-
-<a id="kapitel-2"></a>
 
 ## Kapitel 2 – Testumgebung: Werkzeuge, Aufbau und Testpasswörter
 
@@ -470,7 +466,7 @@ Die vollständige Liste aller Hash-Modi findet man im Hashcat-Wiki [Q9].
 
 ### 6. Infrastruktur für die Verteidigungstests
 
-Für die praxisnahen Verteidigungstests in [Kapitel 04](#kapitel-4) haben wir zusätzlich eine kleine Server-Infrastruktur mit **Docker** aufgebaut. Hier ist das Setup kurz zusammengefasst, damit man es nachbauen kann.
+Für die praxisnahen Verteidigungstests in [Kapitel 04](#kapitel-4--verteidigung-von-salt-bis-zum-security-audit) haben wir zusätzlich eine kleine Server-Infrastruktur mit **Docker** aufgebaut. Hier ist das Setup kurz zusammengefasst, damit man es nachbauen kann.
 
 #### Docker installieren
 
@@ -686,8 +682,6 @@ Weil der Tresor im Browser mit der Web Crypto API verschlüsselt wird. Diese ste
 </details>
 
 ---
-
-<a id="kapitel-3"></a>
 
 ## Kapitel 3 – Angriffe: Dictionary, Brute-Force und Rainbow Tables
 
@@ -972,7 +966,7 @@ Der ungesalzene MD5-Hash von `123456` wurde **sofort in der Tabelle gefunden** (
 | **Dictionary** | Passwörter aus einer Liste ausprobieren | häufigen, geleakten, vorhersehbaren Passwörtern | einzigartige, zufällige Passwörter; langsame Hashes; Blocklist |
 | **Brute-Force** | alle Kombinationen ausprobieren | kurzen Passwörtern und schnellen Hashes | lange Passwörter; bcrypt / Argon2 |
 | **Rainbow Table** | vorberechnete Hashes nachschlagen | ungesalzenen Hashes | Salt |
-| **Online-Raten** (am Login) | Passwörter direkt am Server ausprobieren | fehlender Begrenzung von Fehlversuchen | Rate-Limiting, Lockout, 2FA → [Kapitel 04](#kapitel-4) |
+| **Online-Raten** (am Login) | Passwörter direkt am Server ausprobieren | fehlender Begrenzung von Fehlversuchen | Rate-Limiting, Lockout, 2FA → [Kapitel 04](#kapitel-4--verteidigung-von-salt-bis-zum-security-audit) |
 
 ---
 
@@ -1004,13 +998,11 @@ Gegen vorberechnete Tabellen (Rainbow Tables, Lookup-Dienste wie CrackStation). 
 
 ---
 
-<a id="kapitel-4"></a>
-
 ## Kapitel 4 – Verteidigung: Von Salt bis zum Security-Audit
 
 ---
 
-In [Kapitel 03](#kapitel-3) haben wir gesehen, wie schnell schwache Passwörter und schnelle Hashes fallen. In diesem Kapitel setzen wir die Gegenmassnahmen um – zuerst als eigene, kleine Skripte, damit man das Prinzip versteht, und danach mit Werkzeugen, die auch in echten Unternehmen eingesetzt werden.
+In [Kapitel 03](#kapitel-3--angriffe-dictionary-brute-force-und-rainbow-tables) haben wir gesehen, wie schnell schwache Passwörter und schnelle Hashes fallen. In diesem Kapitel setzen wir die Gegenmassnahmen um – zuerst als eigene, kleine Skripte, damit man das Prinzip versteht, und danach mit Werkzeugen, die auch in echten Unternehmen eingesetzt werden.
 
 | Abschnitt | Schützt gegen | Ebene |
 |---|---|---|
@@ -1759,8 +1751,6 @@ Weil das Zertifikat selbstsigniert ist und keine Vertrauenskette zu einer anerka
 
 ---
 
-<a id="kapitel-5"></a>
-
 ## Kapitel 5 – Reflexion und Fazit
 
 ---
@@ -1896,8 +1886,6 @@ Rate-Limiting und 2FA helfen hier nicht, weil der Angreifer offline rät. Dann g
 
 ---
 
-<a id="kapitel-6"></a>
-
 ## Kapitel 6 – Quellenverzeichnis
 
 ---
@@ -1961,8 +1949,6 @@ Alle Quellen sind im Fliesstext mit ihrer Nummer (z. B. **[Q1]**) referenziert. 
 Alle Screenshots, Messwerte, Skripte und Konfigurationen in dieser Dokumentation stammen aus unserer eigenen Testumgebung und wurden von uns selbst erstellt. Die verwendeten Passwörter sind ausschliesslich Testpasswörter.
 
 ---
-
-<a id="kapitel-7"></a>
 
 ## Kapitel 7 – Glossar
 

@@ -1944,6 +1944,14 @@ Alle Quellen sind im Fliesstext mit ihrer Nummer (z. B. **[Q1]**) referenziert. 
 | Q26 | Keycloak: *Server Administration Guide* (Version 26.8.1). <https://www.keycloak.org/docs/latest/server_admin/index.html> | Brute-Force-Detection, OTP-Policies, Benutzerverwaltung | 2, 4 | 29.10.2026 |
 | Q27 | testssl.sh, GitHub. <https://github.com/testssl/testssl.sh> | Werkzeug für das TLS-Security-Audit | 2, 4 | 29.10.2026 |
 
+### Eingesetzte KI-Hilfsmittel
+
+| Nr. | Hilfsmittel | Verwendung | Zeitraum |
+|---|---|---|---|
+| K1 | Anthropic: *Claude* (KI-Assistent). <https://claude.ai> | Unterstützung bei der Fehlersuche (u. a. Fail2Ban unter WSL2, Caddy/TLS, Keycloak-Zertifikate), Strukturierung und sprachliche Überarbeitung der Texte, Gestaltung der Präsentationsfolien | 21.09.–01.11.2026 |
+
+Alle Tests, Messungen, Screenshots und Konfigurationen haben wir selbst durchgeführt. Fachliche Aussagen haben wir mit den oben aufgeführten Primärquellen (Standards, RFCs, offizielle Dokumentationen) abgeglichen.
+
 ### Hinweis zu Bildern und Daten
 
 Alle Screenshots, Messwerte, Skripte und Konfigurationen in dieser Dokumentation stammen aus unserer eigenen Testumgebung und wurden von uns selbst erstellt. Die verwendeten Passwörter sind ausschliesslich Testpasswörter.

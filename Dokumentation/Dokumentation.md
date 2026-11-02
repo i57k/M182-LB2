@@ -1948,7 +1948,7 @@ Alle Quellen sind im Fliesstext mit ihrer Nummer (z. B. **[Q1]**) referenziert. 
 
 | Nr. | Hilfsmittel | Verwendung | Zeitraum |
 |---|---|---|---|
-| K1 | Anthropic: *Claude* (KI-Assistent). <https://claude.ai> | Unterstützung bei der Fehlersuche (u. a. Fail2Ban unter WSL2, Caddy/TLS, Keycloak-Zertifikate), Strukturierung und sprachliche Überarbeitung der Texte, Gestaltung der Präsentationsfolien | 21.09.–01.11.2026 |
+| K1 | Anthropic: *Claude* (KI-Assistent). <https://claude.ai> | Unterstützung bei der Fehlersuche (u. a. Fail2Ban unter WSL2, Caddy/TLS, Keycloak-Zertifikate), Strukturierung und sprachliche Überarbeitung der Texte | 21.09.–01.11.2026 |
 
 Alle Tests, Messungen, Screenshots und Konfigurationen haben wir selbst durchgeführt. Fachliche Aussagen haben wir mit den oben aufgeführten Primärquellen (Standards, RFCs, offizielle Dokumentationen) abgeglichen.
 

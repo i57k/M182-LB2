@@ -1,6 +1,5 @@
-<div align="center">
-  <img src="banner.svg" alt="Passwort-Sicherheit" width="100%">
-</div>
+<img width="1568" height="784" alt="Titelblatt_M182" src="https://github.com/user-attachments/assets/8c8dce9b-81b4-4b81-a64d-edd7ee92e016" />
+
 
 <br>
 

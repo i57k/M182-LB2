@@ -1,4 +1,59 @@
-# M182 LB2 – Passwort-Sicherheit
+<div align="center">
+  <svg width="100%" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Passwort-Sicherheit">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#13161c"/>
+        <stop offset="1" stop-color="#1c2129"/>
+      </linearGradient>
+      <style>
+        .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+        .sans { font-family: 'Segoe UI', system-ui, sans-serif; }
+        .plain  { animation: fade 8s ease-in-out infinite; }
+        .hashed { animation: fadehash 8s ease-in-out infinite; }
+        @keyframes fade {
+          0%, 35% { opacity: 1; }
+          45%, 90% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        @keyframes fadehash {
+          0%, 35% { opacity: 0; }
+          45%, 90% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+        .cursor { animation: blink 1s steps(1) infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+        .shield { transform-origin: 820px 130px; animation: pulse 3s ease-in-out infinite; }
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); opacity: .9; }
+          50% { transform: scale(1.08); opacity: 1; }
+        }
+        .scan { animation: scanmove 8s ease-in-out infinite; }
+        @keyframes scanmove {
+          0%, 35% { opacity: 0; }
+          40% { opacity: 1; }
+          44% { transform: translateX(560px); opacity: 1; }
+          46%, 100% { opacity: 0; transform: translateX(0); }
+        }
+      </style>
+    </defs>
+    <rect width="900" height="260" rx="20" fill="url(#bg)"/>
+    <rect x="24" y="24" width="4" height="52" rx="2" fill="#f0a830"/>
+    <text x="44" y="58" class="sans" font-size="30" font-weight="800" fill="#f7f6f2">Passwort-Sicherheit</text>
+    <text x="44" y="90" class="sans" font-size="16" fill="#9aa3b2">Angriffe auf Hashing &amp; Verteidigungsstrategien · M182 LB2</text>
+    <rect x="44" y="130" width="620" height="68" rx="12" fill="#0d0f14" stroke="#2a2f39" stroke-width="1.5"/>
+    <text x="68" y="172" class="mono plain" font-size="26" fill="#2f9e6f">K7#mPx9!qLz2<tspan class="cursor" fill="#f0a830">▋</tspan></text>
+    <text x="68" y="172" class="mono hashed" font-size="19" fill="#e5484d">52eadd82f8eeee484e875b496f54608c</text>
+    <rect class="scan" x="46" y="132" width="3" height="64" fill="#f0a830" opacity="0"/>
+    <g class="shield">
+      <path d="M820 96 l34 14 v26 c0 26 -18 42 -34 50 c-16 -8 -34 -24 -34 -50 v-26 Z"
+            fill="#1c2129" stroke="#f0a830" stroke-width="3"/>
+      <path d="M808 132 l9 10 l18 -20" fill="none" stroke="#2f9e6f" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </svg>
+</div>
+
+<br>
 
 **Angriffe auf Hashing und mögliche Verteidigungsstrategien – Salt, moderne Verfahren wie bcrypt oder Argon2, Passwort-Policy, Rate-Limiting, 2FA**
 
